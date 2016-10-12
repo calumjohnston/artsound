@@ -92,20 +92,26 @@ nav{
 
 div.splash{
     display:flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     background-image: -webkit-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
     background-image: -o-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
     background-image: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
     background-color:red;
-    height:50vh;
+    height:60vh;
     margin-bottom:50px;
 }
+div.title-wrapper{
+    margin-top:15vh;
+    margin-bottom:10vh;
+}
 #splash-text{
-    font-size:3em;
+    font-size:4em;
     color:#f5f6f8;
     font-family: 'Open Sans', sans-serif;
+    letter-spacing:1.1pt;
+    line-height:1em;
 }
 #fm{
     color:#CE5153;
@@ -114,12 +120,23 @@ div.splash{
     1px -1px white,
     -1px 1px white,
     -1px -1px white;
+    letter-spacing:1.1pt;
 }
+#splash-tag{
+    color:#f5f6f8;
+    text-transform: uppercase;
+    letter-spacing:1.7pt;
+    font-size:1.3em;
+    margin-top:0;
+    font-weight:100;
+}
+
 /* Event Grid */
 .section-content{
     display:flex;
     width:100%;
     justify-content: center;
+    min-height:70vh;
 }
 .section-content .thumbnails {
     display: flex;
@@ -169,4 +186,40 @@ div.splash{
 }
 p.meta{
     text-align:left;
+}
+/* Triangle*/
+#triangle-top{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 125px 0 0px 99vw;
+border-color: transparent transparent transparent white;
+}
+
+#triangle-bottom{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 99vw 125px 0;
+border-color: transparent white transparent transparent;
+}
+
+/* Section three */
+#three{
+   background-image: -webkit-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
+    background-image: -o-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
+    background-image: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
+    background-color:red;
+  
+    height:50vh;
+    width:100%;
+}
+.about-info{
+    color:#eee;
+    max-width:600px;
+    border-radius:2px;
+    padding:30px;
+    font-size:1.4em;
+    line-height:1.5em;
+    height:100px;
 }
