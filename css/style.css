@@ -46,6 +46,7 @@ nav{
     z-index:5;
     display:flex;
     justify-content: center;
+    max-width:100%;
 }
 
     nav .inner{
