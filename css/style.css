@@ -94,19 +94,27 @@ div.splash{
     display:flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    background-image: -webkit-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-image: -o-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-image: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-color:red;
+    background: #4B79A1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height:60vh;
-    margin-bottom:50px;
+    margin-bottom:80px;
 }
 div.title-wrapper{
     margin-top:15vh;
     margin-bottom:10vh;
+    flex-grow: 1; 
+    display:flex;
+    flex-direction:column;
+}
+.fa-play-circle-o{
+    line-height: 40px;
+    color:white;
+    font-size:120px;
+    margin:0 auto;
 }
 #splash-text{
+    margin-top:40px;
     font-size:4em;
     color:#f5f6f8;
     font-family: 'Open Sans', sans-serif;
@@ -114,7 +122,7 @@ div.title-wrapper{
     line-height:1em;
 }
 #fm{
-    color:#CE5153;
+    color:#4B79A1;
     text-shadow:
     1px 1px white,
     1px -1px white,
@@ -125,18 +133,26 @@ div.title-wrapper{
 #splash-tag{
     color:#f5f6f8;
     text-transform: uppercase;
-    letter-spacing:1.7pt;
+    letter-spacing:2.4pt;
     font-size:1.3em;
     margin-top:0;
     font-weight:100;
 }
 
 /* Event Grid */
+
+.section-heading{
+    width:1200px;
+    margin:0 auto;
+    margin-bottom:30px;
+    color:#f5756c;
+    text-transform: uppercase;
+}
 .section-content{
     display:flex;
     width:100%;
     justify-content: center;
-    min-height:70vh;
+    margin-bottom:80px;
 }
 .section-content .thumbnails {
     display: flex;
@@ -151,7 +167,7 @@ div.title-wrapper{
 }
 .section-content .thumbnails li, .item .thumbnails li {
     list-style: none;
-    margin: 0px 0px 30px 0px;
+    margin: 0px;
 }
 .thumbnail {
     transition: all 100ms ease-in-out;
@@ -206,11 +222,9 @@ border-color: transparent white transparent transparent;
 
 /* Section three */
 #three{
-   background-image: -webkit-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-image: -o-linear-gradient(330deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-image: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(bg.jpg);
-    background-color:red;
-  
+    background: #4B79A1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height:50vh;
     width:100%;
 }
