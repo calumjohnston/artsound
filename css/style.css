@@ -446,6 +446,9 @@ footer{
     }
 }
 @media screen and (max-width:490px){
+    #triangle-top{
+        display:none;
+    }
     .title-wrapper{
         transform:scale(0.5);
     }
