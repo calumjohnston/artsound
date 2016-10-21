@@ -311,13 +311,12 @@ div.title-wrapper{
     border-radius:100%;
     cursor:pointer;
 }
-
 .caption p{
     border-top:1px solid #eee;
 }
 .section-content-heading{
     margin-bottom:30px;
-    font-size:1.4em;
+    font-size:1.2em;
     font-weight:500;
 }
 
@@ -329,7 +328,6 @@ div.title-wrapper{
 }
 .screenshot {
     height:50%;
-    width:50%:
 }
 
 .thumbnails li h2{
@@ -337,20 +335,37 @@ div.title-wrapper{
     justify-content: center;
     text-align: center;
     background-color: white;
-    color:#222;
-    font-size: 22px;
-    letter-spacing: 1.5pt;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16pt;
     font-weight: 400;
+    line-height: 1.65;
     margin:0;
 }
 .thumbnails li p, .thumbnails p {
-    color:#222;
+    color:#7f888f;
     margin: 0;
     padding: 20px 20px;
-    font-size: 16px;
-    font-weight: 200;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.65;
+    font-family: "Open Sans", sans-serif;
 }
-
+.read-more{
+    width:90%;
+    height:50px;
+    margin:0 auto;
+    margin-bottom: 20px;
+    border:1px solid #4696E5;
+    border-radius:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-size:1.2em;
+}
+.read-more:hover{
+    background-color:#f5f6f8;
+}
 .darker h2, .darker p {
     background-color: unset!important;
     
@@ -538,7 +553,7 @@ footer{
         width:900px;
     }
     .thumbnail{
-        width:300px;
+        width:250px;
     }
 }
 @media screen and (max-width:960px){
