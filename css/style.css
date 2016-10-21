@@ -181,10 +181,12 @@ div.title-wrapper{
     font-size:120px;
     margin:0 auto;
     cursor: pointer;
+    -webkit-transition: all 800ms;
     transition:all 800ms;
 }
 .fa-play-circle-o:hover{
-    transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+            transform:rotateY(360deg);
     
 }
 #splash-text{
@@ -301,7 +303,8 @@ div.title-wrapper{
     border-radius:3px;
 }
 .thumbnail:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     z-index:5000;
 }
 
@@ -331,8 +334,12 @@ div.title-wrapper{
 }
 
 .thumbnails li h2{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     background-color: white;
     font-family: "Open Sans", sans-serif;
@@ -357,9 +364,15 @@ div.title-wrapper{
     margin-bottom: 20px;
     border:1px solid #4696E5;
     border-radius:5px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor:pointer;
     font-size:1.2em;
 }
@@ -395,6 +408,8 @@ border-color: transparent white transparent transparent;
 #three{ 
     width:100%;
     padding-bottom:50px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
 }
 .three-left{
@@ -420,19 +435,25 @@ border-color: transparent white transparent transparent;
 }
 #program-title{
     color:#4696E5;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
     margin-bottom:0;
     margin-bottom:20px;
 }
 .event-container{
+    -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 }
 .event-container:not(#last){
     margin-bottom:20px;
 }
 .event-container:hover{
-    transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+            transform:scale(1.05);
     
     }
 .event-row{
@@ -569,8 +590,13 @@ footer{
         width:50vw;
     }
     #three{
-        flex-direction:column;
-        align-items:center;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+            -ms-flex-direction:column;
+                flex-direction:column;
+        -webkit-box-align:center;
+            -ms-flex-align:center;
+                align-items:center;
     }
     .program-wrap{
         margin-bottom:50px;
