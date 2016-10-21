@@ -249,7 +249,7 @@ div.title-wrapper{
     cursor:pointer;
 }
 .social i:hover{
-    color:#4696E5;
+    color:#333;
 }
 .section-heading{
     margin-bottom:20px;
@@ -342,12 +342,12 @@ div.title-wrapper{
     margin:0;
 }
 .thumbnails li p, .thumbnails p {
-    color:#7f888f;
+    color:#333;
     margin: 0;
     padding: 20px 20px;
     font-size: 15px;
     font-weight: 400;
-    line-height: 1.65;
+    line-height: 1.75;
     font-family: "Open Sans", sans-serif;
 }
 .read-more{
@@ -477,7 +477,8 @@ border-color: transparent white transparent transparent;
 }
 /* SPONSORS */
 .sponsors{
-    background-color:#F0F0F0;
+    border-top:1px solid #eee;
+    padding:20px 0px;
     overflow:hidden;
 }
 .sponsors ul{
@@ -505,8 +506,8 @@ border-color: transparent white transparent transparent;
 }
 /* FOOTER */
 footer{
-    background-color:#6aabea;
-    color:#eee;
+    background-color:#eee;
+    color:#333;
 }
 .footer-info{
     display:-webkit-box;
@@ -530,7 +531,10 @@ footer{
 }
 
 .footer-info .social i{
-    color:#eee;
+    color:#333;
+}
+.footer-info .social i:hover{
+    color:#4696E5;
 }
 
 
