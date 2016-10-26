@@ -3,7 +3,8 @@ body{
     padding:0;
     margin:0;
     font-family:Source Sans Pro;
-    font-weight:200;
+    color:#646464;
+    font-weight:400;
     
 }
 a{
@@ -125,12 +126,19 @@ nav{
 
 /* Mobile Nav */
 .slicknav_menu{
-    background-color:#4696E5;
     height:55px;
     z-index:1000;
+    position: absolute;
+    width:100%;
+    right:5px;
+    top:5px;
+    background:none;
 }
 .slicknav_btn{
-    background-color:#4696E5;
+    background:none;
+}
+.slicknav_icon-bar{
+    background-color:white!important;
 }
 .slicknav_menu .slicknav_icon-bar {
     height:4px;
@@ -150,18 +158,30 @@ div.splash{
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background: #4696E5;
-    height:60vh;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    max-height:60vh;
     margin-bottom:10px;
+    overflow:hidden;
 }
-div.title-wrapper{
+.tiles{
+    display:flex;
+    flex-wrap:wrap;
+    height:60vh;
+    position:absolute;
+    z-index:-5;
+    width:1920px;
+}
+.tiles img{
+    width:10%;
+    height:33.3333333333%;
+    filter:brightness(0.3);
+}
+.title-wrapper:hover .tiles img{
+    filter:brightness(0.7);
+}
+.title-wrapper{
     margin-top:15vh;
     margin-bottom:10vh;
     -webkit-box-flex: 1;
@@ -170,6 +190,7 @@ div.title-wrapper{
     display:-webkit-box; 
     display:-ms-flexbox; 
     display:flex;
+    align-items: center;
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
         -ms-flex-direction:column;
@@ -189,6 +210,7 @@ div.title-wrapper{
             transform:rotateY(360deg);
     
 }
+
 #splash-text{
     margin-top:90px;
     font-size:4em;
@@ -299,12 +321,12 @@ div.title-wrapper{
     border-radius:4px;
     text-align: center;
     width:350px;
-     border:1px solid #eee;
+     border:1px solid #D3D3D3;
     border-radius:3px;
 }
 .thumbnail:hover{
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
     z-index:5000;
 }
 
@@ -349,7 +371,6 @@ div.title-wrapper{
     margin:0;
 }
 .thumbnails li p, .thumbnails p {
-    color:#333;
     margin: 0;
     padding: 20px 20px;
     font-size: 15px;
@@ -392,7 +413,7 @@ p.meta{
 width: 0;
 height: 0;
 border-style: solid;
-border-width: 125px 0 0px 99vw;
+border-width: 117px 0 0px 99vw;
 border-color: transparent transparent transparent white;
 }
 
@@ -480,7 +501,6 @@ border-color: transparent white transparent transparent;
 
 .event-info{
     padding:0 20px;
-    color:#222;
     background-color:white;
     font-size:1.2em;
     overflow: hidden;
@@ -489,9 +509,8 @@ border-color: transparent white transparent transparent;
     font-size:1.3em;
     cursor:pointer;
     padding-bottom:10px;
-    color:#222;
     margin:0;
-    font-weight:300;
+    font-weight:400;
     letter-spacing:1.5pt;
     border-bottom:1px solid #eee;
     
@@ -563,7 +582,6 @@ footer{
 
 /* MEDIA QUERIES */
 
-
 @media screen and (min-width:960px){
     #menu,.slicknav_menu{
         display:none;
@@ -587,7 +605,7 @@ footer{
         display:none;
     }
     .contain{
-        width:50vw;
+        width:80vw;
     }
     #three{
         -webkit-box-orient:vertical;
@@ -600,9 +618,14 @@ footer{
     }
     .program-wrap{
         margin-bottom:50px;
+        width:80vw;
     }
-    .three-left,.three-right{
-        width:50vw;
+    .three-left{
+        width:80vw;
+        margin:0;
+    }
+    .three-right{
+        width:80vw;
         margin:0;
     }
     .section-heading{
@@ -611,7 +634,6 @@ footer{
     .title-wrapper{
         -webkit-transform:scale(0.8);
                 transform:scale(0.8);
-        margin-top:10vw!important;
     }
     .date-wrap{
         max-height:42px;
@@ -647,9 +669,14 @@ footer{
     .social{
         display:none;
     }
-
+    .tiles{
+        height:50vh;
+    }
     .date-select{
         width:100%;
+    }
+     #triangle-top{
+        display:none;
     }
 }
 @media screen and (max-width:640px){
@@ -674,9 +701,7 @@ footer{
 
 }
 @media screen and (max-width:490px){
-    #triangle-top{
-        display:none;
-    }
+   
     .title-wrapper{
         -webkit-transform:scale(0.5);
                 transform:scale(0.5);
