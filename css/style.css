@@ -5,6 +5,7 @@ body{
     font-family:Source Sans Pro;
     color:#646464;
     font-weight:400;
+    overflow-x: hidden;
     
 }
 a{
@@ -125,20 +126,27 @@ nav{
         }
 
 /* Mobile Nav */
+.slicknav_nav{
+    background:white;
+    width:100vw;
+    position: absolute;
+    top: 50px;
+}
 .slicknav_menu{
     height:55px;
     z-index:1000;
     position: absolute;
     width:100%;
-    right:5px;
-    top:5px;
-    background:none;
+    right:0px;
+    top:0px;
+    padding:5px;
+    background:white;
 }
 .slicknav_btn{
     background:none;
 }
 .slicknav_icon-bar{
-    background-color:white!important;
+    background-color:#666!important;
 }
 .slicknav_menu .slicknav_icon-bar {
     height:4px;
@@ -150,7 +158,12 @@ nav{
 .slicknav_nav li a{
     color:#222;
     text-transform: uppercase;
+    border-radius:0!important;
     font-size:2em;
+    background:white;
+    width:100%;
+    margin:0;
+    padding-left:20px;
 }
 /* Splash */
 
@@ -210,7 +223,6 @@ div.splash{
             transform:rotateY(360deg);
     
 }
-
 #splash-text{
     margin-top:90px;
     font-size:4em;
@@ -237,7 +249,6 @@ div.splash{
 }
 
 /* Event Grid */
-
 .date-wrap{
     margin-bottom:20px;
     display:-webkit-box;
@@ -257,7 +268,7 @@ div.splash{
     width:200px;
     background-color:#4696E5;
     color:#eee;
-    
+
 }
 #date, #left-arrow, #right-arrow{
        padding:10px;
@@ -578,8 +589,196 @@ footer{
 }
 
 
+/* ART DIARIES PAGE */
 
+#player{
+    background-color:#4696E5;
+}
+.player-container{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    height:100%;
+}
+.player-container h3{
+    margin-left:40px;
+    color:#eee;
+    border:2px solid #eee;
+    border-radius:30px;
+    padding:10px 30px;
+}
+.play-icon,.fa-volume-up,.fa-volume-off{
+    color:#eee;
+    transition: all 200ms ease;
+    cursor:pointer;
+}
+.play-icon:hover,.fa-volume-up:hover,.fa-volume-off:hover{
+    transform:scale(1.08);
+}
+.play-icon{
+    font-size:82px;
+    margin:20px;
+}
+.fa-volume-up,.fa-volume-off{
+    font-size:40px;
+}
+.fa-volume-off{
+    margin-right:10px;
+}
+.grid-title,.submit-your-own{
+    width:66.6666666%;
+    padding:20px 0px;
+    font-size:2em;
+    font-weight:200;
+}
+.grid-title{
+    border-top:1px solid #b3b3b3;
+    margin-top:40px;
+}
+.submit-your-own{
+    border-bottom:1px solid #b3b3b3;
+    margin-bottom:40px;
+}
 
+.grid-container{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+.episode{
+    width:33.33333333%;
+    height:350px;
+    
+}
+.episode img{
+    width:100%;
+    height:350px;
+    transition: all 160ms ease;
+}
+
+.episode:hover img{
+    -webkit-filter:brightness(0.25);
+    transform:scale(1.05);
+}
+.episode-name{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(232,22,33,0.2);
+    position: absolute;
+    margin-top: -354px;
+    width: 400px;
+    height: 350px;
+    color: #eee;
+    transform:scale(1.05);
+}
+.episode:hover span{
+    display:flex!important;
+}
+form{
+    width:66.666666%;
+    display:flex;
+}
+::-webkit-input-placeholder{
+    width:50%;
+    padding-left:20px;
+}
+
+.form-left,.form-right{
+    width:45%;
+}
+.form-left{
+    margin-right:10%;
+}
+.form-right p{
+    border-top:1px solid #eee;
+    padding-top:20px;
+}
+form div input,textarea{
+    min-width:100%;
+    max-width:100%;
+    border:1px solid #888;
+    border-radius:6px;
+    margin-bottom:20px;
+    padding:20px 0px;
+}
+#submit-form{
+    width:100%;
+    background-color:#4696E5;
+    border:1px solid #eee;
+    border-radius: 6px;
+    color:#eee;
+    text-transform: uppercase;
+    padding:20px 0px;
+    margin-bottom:50px;
+}
+
+/* MEMBERSHIP PAGE*/
+
+.panel-container{
+    display:flex;
+}
+.info-panel,.member-panel,.donate-panel{
+    width:33.33333333%;
+}
+.panel-header{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:40px;
+    padding:30px;
+    font-size:2em;
+    background:#4696E5;
+    color:#eee;
+}
+.middle-header{
+    background:#337dc6;
+}
+.panel-info{
+    height:300px;
+    border-bottom:1px solid #4696E5;
+    padding:30px;
+    padding-bottom:60px;
+    margin-bottom:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.donate-form{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+}
+form div, form div input{
+    width:100%;
+}
+.donate-button{
+    width:100%;
+    background-color:#4696E5;
+    padding:20px;
+    border:none;
+    border-radius:6px;
+    color:#eee;
+    text-transform: uppercase;
+    font-size:16px;
+    font-weight:bold;
+}
+#mem-type{
+    width:100%;
+}
+select{
+    width:100%;
+    height:58px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+.membership-form{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
 /* MEDIA QUERIES */
 
 @media screen and (min-width:960px){
@@ -592,20 +791,36 @@ footer{
     .contain{
         max-width:900px;
     }
+    .episode span{
+        width:300px;
+    }
     .thumbnails{
         width:900px;
     }
     .thumbnail{
         width:250px;
     }
+    .panel-header{
+        font-size:1.3em;
+    }
+    .panel-info{
+        height:500px;
+    }
+    
 }
 @media screen and (max-width:960px){
 
     #nav{
         display:none;
     }
+     .player-container{
+    margin-top:55px;
+    }
     .contain{
-        width:80vw;
+        width:600px;
+    }
+    .episode{
+        width:50%;
     }
     #three{
         -webkit-box-orient:vertical;
@@ -664,8 +879,33 @@ footer{
         overflow:hidden;
         padding-bottom:20px;
     }
+    form{
+        flex-direction: column;
+        width:100%;
+    }
+    .form-right,.form-left{
+        width:100%;
+    }
+    .panel{
+        width:100%;
+    }
+    .panel-container{
+        flex-direction: column;
+    }
+    .panel-info{
+        height:220px;
+        margin-bottom:20px;
+    }
 }
 @media screen and (max-width:670px){
+    
+    .player-container{
+        display:none;
+    }
+    .footer-info{
+        max-width:100vw;
+        font-size:13px;
+    }
     .social{
         display:none;
     }
@@ -680,6 +920,18 @@ footer{
     }
 }
 @media screen and (max-width:640px){
+    #art-grid{
+        max-width:100vw;
+    }
+    .grid-container{
+        max-width:100vw;
+    }
+    .episode{
+        width:100vw;
+    }
+    .episode span{
+        width:100vw;
+    }
     .title-wrapper{
         -webkit-transform:scale(0.7);
                 transform:scale(0.7);
